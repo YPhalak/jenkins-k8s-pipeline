@@ -23,7 +23,7 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 sh 'docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS'
-                sh 'docker push $DOCKER_HUB_USER/flask-k8s:latest'
+                sh 'sudo docker push $DOCKER_HUB_USER/flask-k8s:latest'
             }
         }
 
